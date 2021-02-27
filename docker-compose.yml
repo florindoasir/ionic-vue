@@ -6,7 +6,12 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    image: ansulppo/front
+    image: ionic-vue-2/front
     volumes:
-      - ./:/app
+      - ./:/src
+      - nodemodules:/src/node_modules
+    ports:
+      - 8100:8100
 
+volumes:
+    nodemodules: {}
