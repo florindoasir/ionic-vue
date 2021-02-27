@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+
+  node_vue:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: ansulppo/front
+    volumes:
+      - ./:/app
+
